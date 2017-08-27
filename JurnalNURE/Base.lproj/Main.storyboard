@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S3O-Gm-dfi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="6iR-BZ-c8n">
+            <objects>
+                <viewController id="S3O-Gm-dfi" customClass="KAVMainVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yDM-Ai-Ypg"/>
+                        <viewControllerLayoutGuide type="bottom" id="eDl-M0-Sj0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DOu-CH-bf5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSg-3J-oyM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Journal" id="LXo-oo-Kak"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oF-ia-DNF">
+                                <rect key="frame" x="16" y="81" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8034091592" green="0.38325330899999999" blue="0.37628965040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Faculties">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionFaculty:" destination="S3O-Gm-dfi" eventType="touchUpInside" id="JV0-9O-uao"/>
+                                    <segue destination="dXV-oS-LyV" kind="show" id="2WZ-k9-e7z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLv-8F-dcw">
+                                <rect key="frame" x="209" y="252" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91933958979999997" green="0.48947333739999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="All Students">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionStudents:" destination="S3O-Gm-dfi" eventType="touchUpInside" id="6Sr-SV-jM3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDY-2Y-CYS">
+                                <rect key="frame" x="16" y="252" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99359720949999997" green="0.94274692760000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="All Lessons">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionLessons:" destination="S3O-Gm-dfi" eventType="touchUpInside" id="GIG-fF-xLA"/>
+                                    <action selector="actionStudents:" destination="S3O-Gm-dfi" eventType="touchUpInside" id="NXb-r1-aGW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pA3-Uy-igF">
+                                <rect key="frame" x="209" y="81" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.6613652672" blue="0.35353174030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="All Groups">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionGroup:" destination="S3O-Gm-dfi" eventType="touchUpInside" id="5du-Nf-nf4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15D-2U-ELA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48.799999999999997" y="-363.86806596701655"/>
+        </scene>
+        <!--GroupVC-->
+        <scene sceneID="3qT-oE-Dhs">
+            <objects>
+                <viewController storyboardIdentifier="groupUser" id="jjN-It-aFv" customClass="KAVGroupVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bZu-wJ-NSj"/>
+                        <viewControllerLayoutGuide type="bottom" id="hb6-wQ-rlY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i4h-tk-8B1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P5B-qm-JcE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="1" green="0.6613652672" blue="0.35353174030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Group USER" id="ixz-A9-xtx">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RRt-YI-bcm">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionCancel:" destination="jjN-It-aFv" id="0zQ-bH-7Vg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IOk-3j-Bqe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97367626429999998" green="0.78501778840000003" blue="0.39523008469999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="1" green="0.6613652672" blue="0.35353174030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jjN-It-aFv" id="iQT-iO-tAr"/>
+                                    <outlet property="delegate" destination="jjN-It-aFv" id="OlE-LI-jtL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancel" destination="RRt-YI-bcm" id="s50-z0-aKL"/>
+                        <outlet property="navigationBar" destination="P5B-qm-JcE" id="AB0-hf-Hqv"/>
+                        <outlet property="tableGroup" destination="IOk-3j-Bqe" id="JmS-xX-SoO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HV6-5e-DFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="-34"/>
+        </scene>
+        <!--LessonsVC-->
+        <scene sceneID="NbE-3F-vXz">
+            <objects>
+                <viewController storyboardIdentifier="lessonAll" id="fjM-NR-du2" customClass="KAVLessonsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZOQ-UI-9OQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ri9-aX-6ly"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d8s-8g-KFU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-cZ-TI8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.99359720949999997" green="0.94274692756717438" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="ALL LESSONS" id="tn4-aA-Qhd">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="7Mt-gW-Bvz">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionCancel:" destination="fjM-NR-du2" id="2lC-5Y-223"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RRu-I2-1NV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99359720949999997" green="0.97257095579999997" blue="0.39875578880000001" alpha="0.50433433219178081" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.99359720949999997" green="0.94274692760000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fjM-NR-du2" id="xDP-c7-oec"/>
+                                    <outlet property="delegate" destination="fjM-NR-du2" id="1wI-Lr-40t"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="Yho-cZ-TI8" id="N5X-LJ-jiS"/>
+                        <outlet property="tableLesson" destination="RRu-I2-1NV" id="SBW-lf-neE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2c-ia-PXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="900"/>
+        </scene>
+        <!--Lesson CreatedVC-->
+        <scene sceneID="RCw-pv-1jM">
+            <objects>
+                <viewController storyboardIdentifier="lessonCreated" id="d2Q-gT-NyQ" customClass="KAVLessonCreatedVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o5v-ht-um3"/>
+                        <viewControllerLayoutGuide type="bottom" id="JI6-Dh-Znt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iUG-bU-2fZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEx-hI-jvI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="CREATE LESSON" id="Yti-JN-uf3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PzJ-mj-Aqy">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionCancel:" destination="d2Q-gT-NyQ" id="Bcf-SY-k1I"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="76Z-zy-OEu">
+                                <rect key="frame" x="16" y="105" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="actionTextChanged:" destination="d2Q-gT-NyQ" eventType="editingChanged" id="dpx-rM-3ga"/>
+                                    <outlet property="delegate" destination="d2Q-gT-NyQ" id="FDl-Re-3II"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write name lesson:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxe-Kk-8np">
+                                <rect key="frame" x="16" y="76" width="146" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zfV-q1-0A6">
+                                <rect key="frame" x="0.0" y="176" width="375" height="447"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="d2Q-gT-NyQ" id="hVh-Sk-MIK"/>
+                                    <outlet property="delegate" destination="d2Q-gT-NyQ" id="cYO-cz-RL1"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2x-Qh-hMY">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CREATE"/>
+                                <connections>
+                                    <action selector="actionCreateLesson:" destination="d2Q-gT-NyQ" eventType="touchUpInside" id="eNq-lP-knp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected group, add lesson:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-9B-etd">
+                                <rect key="frame" x="16" y="147" width="213" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="KEx-hI-jvI" id="Jam-OL-hIw"/>
+                        <outlet property="tableGroupsAddLesson" destination="zfV-q1-0A6" id="WAI-sw-MgT"/>
+                        <outlet property="textFieldNameLesson" destination="76Z-zy-OEu" id="qfc-W1-hNE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AuS-S0-AtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.8" y="897.30134932533736"/>
+        </scene>
+        <!--GroupsAPIVC-->
+        <scene sceneID="ciV-Qn-5A5">
+            <objects>
+                <viewController storyboardIdentifier="groupAPI" id="8Yf-DO-xYE" customClass="KAVGroupsAPIVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ITZ-Su-6ry"/>
+                        <viewControllerLayoutGuide type="bottom" id="18Y-Xx-FQO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IcG-2W-dHC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKR-Zg-YNn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.6613652672" blue="0.35353174030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="1" green="0.6613652672" blue="0.35353174030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Groups API" id="X7y-u3-RsR">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5bY-Z0-fS8">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionCancel:" destination="8Yf-DO-xYE" id="aRd-fd-Dpw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ItD-YE-h3S">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="1" green="0.6613652672" blue="0.35353174030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8Yf-DO-xYE" id="pEW-0U-NMc"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFh-m1-e32">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button Add New Groups"/>
+                                <connections>
+                                    <action selector="actionAddNewGroup:" destination="8Yf-DO-xYE" eventType="touchUpInside" id="j3O-tD-5LT"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HLc-7x-PLe">
+                                <rect key="frame" x="0.0" y="108" width="375" height="518"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97367626429999998" green="0.78501778840000003" blue="0.39523008469999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="1" green="0.6613652672" blue="0.35353174030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Yf-DO-xYE" id="Qda-Ht-OMk"/>
+                                    <outlet property="delegate" destination="8Yf-DO-xYE" id="SB4-5J-nep"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="atq-Ln-XP0">
+                                <rect key="frame" x="0.0" y="323" width="375" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonAddGroup" destination="cFh-m1-e32" id="yf7-BN-xmw"/>
+                        <outlet property="indicatorLoadData" destination="atq-Ln-XP0" id="S0B-ai-4Pe"/>
+                        <outlet property="navigationBarAPI" destination="lKR-Zg-YNn" id="mhY-0L-luP"/>
+                        <outlet property="searchBar" destination="ItD-YE-h3S" id="HH2-ps-6HD"/>
+                        <outlet property="tableGroupAPI" destination="HLc-7x-PLe" id="sGK-0P-0vL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5v-Rr-lsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696.8" y="-35.532233883058474"/>
+        </scene>
+        <!--FacultiesVC-->
+        <scene sceneID="sZX-6l-FZS">
+            <objects>
+                <viewController storyboardIdentifier="faculty" id="dXV-oS-LyV" customClass="KAVFacultiesVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xyi-ES-0Xv"/>
+                        <viewControllerLayoutGuide type="bottom" id="XHK-Qd-YTp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OZw-au-FqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QVu-fZ-oTV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8034091591835022" green="0.39698067307472229" blue="0.38216650485992432" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.8034091592" green="0.39698067310000001" blue="0.38216650489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dXV-oS-LyV" id="rpw-74-6a4"/>
+                                    <outlet property="delegate" destination="dXV-oS-LyV" id="3C2-cT-tDn"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pk-0G-Zn7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.69236984169390858" green="0.019440410241434412" blue="0.0" alpha="0.6544574058219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Faculties USER" id="BJg-0j-OJf">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="N1c-NP-qeu">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionCancel:" destination="dXV-oS-LyV" id="MmL-PJ-tbR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="1pk-0G-Zn7" id="0jA-Pc-p0i"/>
+                        <outlet property="tableFaculty" destination="QVu-fZ-oTV" id="IFm-0Y-0PX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNS-wB-BY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="-771.36431784107947"/>
+        </scene>
+        <!--FacultiesAPIVC-->
+        <scene sceneID="OWm-0Q-RDB">
+            <objects>
+                <viewController storyboardIdentifier="facultyAPI" id="r9l-b3-p08" customClass="KAVFacultiesAPIVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g1b-Dh-rGy"/>
+                        <viewControllerLayoutGuide type="bottom" id="wT9-KF-VSL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SEf-4S-GYn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbI-ak-LTw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.68372453712538062" green="0.019197666757600474" blue="0.0" alpha="0.6544574058219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Faculties API" id="zXF-I7-sOk">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bGA-41-XOl">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="actionCancel:" destination="r9l-b3-p08" id="vke-x1-PIo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H1H-SB-Wlf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8034091591835022" green="0.38325330900740362" blue="0.37628965044468526" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.8034091592" green="0.39698067310000001" blue="0.38216650489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="r9l-b3-p08" id="QPe-9B-586"/>
+                                    <outlet property="delegate" destination="r9l-b3-p08" id="lJU-Nr-BPf"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="X8t-Ap-oAF">
+                                <rect key="frame" x="0.0" y="323" width="375" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="indicatorLoad" destination="X8t-Ap-oAF" id="tby-FC-4Ag"/>
+                        <outlet property="navigationBarAPI" destination="cbI-ak-LTw" id="pu9-1q-SNq"/>
+                        <outlet property="tableFacultyAPI" destination="H1H-SB-Wlf" id="DLs-et-31K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gCd-t3-Hm4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="-771"/>
+        </scene>
+    </scenes>
+</document>

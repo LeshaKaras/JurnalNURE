@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="KAVEntityAPIFaculties" representedClassName="KAVEntityAPIFaculties" syncable="YES">
+        <attribute name="idFacult" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameFacult" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="KAVEntityAPIGroup" representedClassName="KAVEntityAPIGroup" syncable="YES">
+        <attribute name="idGroup" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameGroup" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="KAVEntityFaculties" representedClassName="KAVEntityFaculties" syncable="YES">
+        <attribute name="idFacult" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameFacult" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="listGroup" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="KAVEntityGroup" inverseName="ownerFaculty" inverseEntity="KAVEntityGroup" syncable="YES"/>
+    </entity>
+    <entity name="KAVEntityGroup" representedClassName="KAVEntityGroup" syncable="YES">
+        <attribute name="idGroup" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameGroup" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="listLessons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KAVEntityLesson" inverseName="ownerGroup" inverseEntity="KAVEntityLesson" syncable="YES"/>
+        <relationship name="ownerFaculty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="KAVEntityFaculties" inverseName="listGroup" inverseEntity="KAVEntityFaculties" syncable="YES"/>
+    </entity>
+    <entity name="KAVEntityLesson" representedClassName="KAVEntityLesson" syncable="YES">
+        <attribute name="nameLesson" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="ownerGroup" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="KAVEntityGroup" inverseName="listLessons" inverseEntity="KAVEntityGroup" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="KAVEntityAPIFaculties" positionX="-263" positionY="98" width="128" height="73"/>
+        <element name="KAVEntityAPIGroup" positionX="-261" positionY="197" width="128" height="73"/>
+        <element name="KAVEntityFaculties" positionX="-74" positionY="-36" width="128" height="88"/>
+        <element name="KAVEntityGroup" positionX="99" positionY="-49" width="128" height="103"/>
+        <element name="KAVEntityLesson" positionX="270" positionY="-19" width="128" height="73"/>
+    </elements>
+</model>
