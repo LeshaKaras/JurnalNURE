@@ -70,7 +70,7 @@ NSString* const KAVViewControllerGroupReloadDataNotification = @"KAVViewControll
         case KAVVCShowGroupSelectedLesson:{
             
             KAVDataManager* object = [KAVDataManager sharedManager];
-            self.navigationBar.topItem.title = [NSString stringWithFormat:@"%@",object.selectedLesson.nameLesson];
+            self.navigationBar.topItem.title = [NSString stringWithFormat:@"%@ groups:",object.selectedLesson.nameLesson];
             self.arrayData = [[KAVDataManager sharedManager] makeArrayGroupFromSetSelectedLesson:object.selectedLesson.ownerGroup];
             
             self.stateActionButton = KAVActionButtonAddNewGroupInSelectedLesson;
@@ -158,7 +158,8 @@ NSString* const KAVViewControllerGroupReloadDataNotification = @"KAVViewControll
             
         case KAVActionButtonAddNewGroupInSelectedLesson:{
             
-            button.backgroundColor = [UIColor redColor];
+            [button setImage:[UIImage imageNamed:@"buttonAddGroupSelectedLessonStateNormal.png"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"buttonGroupStateSelected.png"] forState:UIControlStateHighlighted];
             
             break;}
     }

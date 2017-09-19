@@ -61,7 +61,7 @@ typedef enum {
             break;}
         case KAVVCShowLessonsSelectedGroup:{
             
-            self.navigationBar.topItem.title = [NSString stringWithFormat:@"%@",manager.selectedGroup.nameGroup];
+            self.navigationBar.topItem.title = [NSString stringWithFormat:@"%@ lessons:",manager.selectedGroup.nameGroup];
             [self createdButtonSelecteLessonToAdd];
             manager.stateLessonCreateVC = KAVVCShowNCreateNewLessonSelectedGroup;
             self.arrayData = [[KAVDataManager sharedManager]makeArrayLessonsFromSetSelectedGroup:manager.selectedGroup.listLessons];
@@ -303,10 +303,9 @@ typedef enum {
                                                                   80,
                                                                   80)];
     
-//    [button setImage:[UIImage imageNamed:@"NormalStateButtonAddObject.png"] forState:UIControlStateNormal];
-//    [button setImage:[UIImage imageNamed:@"ButtonScanSelected.png"] forState:UIControlStateSelected];
+    [button setImage:[UIImage imageNamed:@"buttonAddLessonSelectedGroupStateNormal.png"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"buttonLessonStateSelected.png"] forState:UIControlStateHighlighted];
     
-    button.backgroundColor = [UIColor blackColor];
     
     [button addTarget:self action:@selector(actionButtonSelecteLessonToAdd:) forControlEvents:UIControlEventTouchUpInside];
     [self.view insertSubview:button aboveSubview:self.tableLesson];
